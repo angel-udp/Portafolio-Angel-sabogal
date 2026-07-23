@@ -569,21 +569,6 @@
   </footer>
 
 <script>
-  
-  // Función auxiliar para resolver rutas de imagen locales de manera limpia (espacios, caracteres especiales y URL encoding)
-  function resolveImgPath(path) {
-    if (!path) return '';
-    if (path.startsWith('http://') || path.startsWith('https://')) return path;
-    
-    let cleanPath = path;
-    try {
-      cleanPath = decodeURIComponent(path);
-    } catch (e) {}
-    
-    // Normalizar la ruta asegurando que cada segmento esté codificado en formato URI válido
-    return cleanPath.split('/').map(segment => encodeURIComponent(segment)).join('/');
-  }
-
   const tools = [
     { category: "Diseño / Editorial", items: ["Photoshop", "Illustrator", "InDesign", "Canva"], symbol: "◈", color: "#ffbc42" },
     { category: "Audiovisual", items: ["After Effects", "Premiere Pro", "Vegas Pro", "CapCut"], symbol: "◉", color: "#d81159" },
@@ -607,9 +592,9 @@
       role: "Diseñador Creativo & Programador",
       tech: "Python, Processing, OpenCV, MadMapper, Canva",
       processMedia: [
-        { type: 'video', src: 'Video 27 segundos CROMA.mp4' },
+        { type: 'video', src: 'Video%2027%20segundos%20CROMA.mp4' },
         { type: 'video', src: '20251028_160310.mp4' },
-        { type: 'image', src: 'WhatsApp Image 2026-07-10 at 19.23.47.jpeg' },
+        { type: 'image', src: 'WhatsApp%20Image%202026-07-10%20at%2019.23.47.jpeg' },
         { type: 'image', src: 'EXAMEN_CROMA_pages-to-jpg-0003.jpg' },
         { type: 'image', src: 'EXAMEN_CROMA_pages-to-jpg-0004.jpg' },
         { type: 'image', src: 'EXAMEN_CROMA_pages-to-jpg-0005.jpg' },
@@ -624,7 +609,7 @@
       title: "Archivo Retro", 
       year: "2026",
       subtitle: "IoT y Fotografía", 
-      heroImage: "foto_1.jpg",
+      heroImage: "foto_1.jpeg",
       secondaryImage: "foto2.jpeg",
       desc: "Dispositivo electrónico inalámbrico de fotografía digital que fusiona la captura contemporánea con la estética pixelada de consolas clásicas. Su arquitectura descentraliza la carga técnica entre un Arduino UNO R4 WiFi (controlador de filtros), una Raspberry Pi Pico 2W (pantalla TFT y galería) y una cámara ESP32 independiente. Resolvió desafíos de comunicación inalámbrica mediante protocolo UDP, optimización de memoria RAM externa y programación en MicroPython para actualizar un archivo en Google Drive en tiempo real.", 
       challenge: "Crear un ecosistema de hardware inalámbrico que capture fotos y despliegue un archivo digital retro en tiempo real.",
@@ -659,7 +644,7 @@
       role: "Diseñador de Hardware & Soldadura",
       tech: "LDRs, Circuitos Análogos, Soldadura de Estaño, Osciladores",
       processMedia: [
-        { type: 'video', src: 'prueba sonido 01.mp4' },
+        { type: 'video', src: 'prueba%20sonido%2001.mp4' },
         { type: 'image', src: 'placas-soldadas.jpeg' },
         { type: 'image', src: 'pr-02.jpeg' },
         { type: 'image', src: 'pr-27.jpeg' },
@@ -671,8 +656,8 @@
         { type: 'image', src: 'secuenciado-binario-gr-02.jpeg' },
         { type: 'image', src: 'p.3_C.png' },
         { type: 'image', src: 'p.4_C.png' },
-        { type: 'image', src: 'p_5_h.jpg' },
-        { type: 'image', src: 'p_6_h.jpg' }
+        { type: 'image', src: 'p_5_h.png' },
+        { type: 'image', src: 'p_6_h.png' }
       ]
     },
     { 
@@ -680,7 +665,7 @@
       title: "Sinfonía Fantástica", 
       year: "2024",
       subtitle: "Animación Audiovisual Inmersiva", 
-      heroImage: "imagen_principal_sf.jpg",
+      heroImage: "imagen_principal_sf.png",
       secondaryImage: "A3_color_bond_tiroyretiro_page-0002.jpg",
       desc: "Pieza de animación digital e interpretación visual inmersiva para el Teatro Municipal de Santiago (Sala Arrau), basada en la obra de Héctor Berlioz. Propone una narrativa surrealista del viaje del creador bajo los efectos del opio, combinando Photoshop para texturas y After Effects para el movimiento. Al ser la primera experiencia con estos softwares, requirió una planificación minuciosa para sincronizar la animación con los tiempos de la música clásica y cumplir con los requerimientos artísticos.", 
       challenge: "Desarrollar una interpretación visual surrealista coordinada al ritmo de la música clásica para proyección a gran escala.",
@@ -691,14 +676,14 @@
       tech: "Photoshop, After Effects, Sincronización de Audio",
       processMedia: [
         { type: 'video', src: 'https://drive.google.com/file/d/1OjI-FLMkwBfScQUskhKotPQ3aPyKkt9A/preview' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0018.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0019.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0020.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0021.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0015.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0016.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0018.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0019.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0020.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0021.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0015.jpg' },
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0016.jpg' },
         { type: 'image', src: 'A3_color_bond_tiroyretiro_page-0004.jpg' },
-        { type: 'image', src: 'Presentación Análisis Sinfonía Fantástica_page-0013.jpg' }
+        { type: 'image', src: 'Presentación%20Análisis%20Sinfonía%20Fantástica_page-0013.jpg' }
       ]
     },
     { 
@@ -706,7 +691,7 @@
       title: "Viral del Infierno", 
       year: "2025",
       subtitle: "Teaser con IA", 
-      heroImage: "imagen_principal_vdi.jpg",
+      heroImage: "imagen_principal_vdi.png",
       secondaryImage: "Aguilar_Orellana_Sabogal_PPT_page-0003.jpg",
       desc: "Propuesta de diseño audiovisual y teaser de terror para una producción de ciencia ficción ambientada en un hospital psiquiátrico de los años 80. La producción se estructuró con herramientas de IA generativa de imagen y video. Para mitigar las distorsiones visuales e inconsistencias físicas entre personajes y entornos, se implementó una rigurosa ingeniería de prompts secuenciales y modelos avanzados de video generativo para unificar los planos.", 
       challenge: "Diseñar un teaser cinematográfico inmersivo combinando herramientas de IA generativa con coherencia visual y narrativa.",
@@ -732,7 +717,7 @@
       subtitle: "Dirección de Arte", 
       heroImage: "Solemne2_Aguilar_Orellana_Sabogal_page-0006.jpg",
       secondaryImage: "Solemne2_Aguilar_Orellana_Sabogal_page-0007.jpg",
-      desc: "Propuesta experimental de diseño de personajes ficticios inspirados en el género Nu Metal bajo un concepto estético coreano. Se utilizaron de forma cruzada plataformas como ChatGPT, Dall-E y Kling AI. Al operar con tecnologías en constante actualización, el reto radicó en corregir anomalías anatómicas y variaciones gráficas de los integrantes. Se solucionó mediante la redacción de instrucciones de texto highly específicas, asegurando una identidad unificada.", 
+      desc: "Propuesta experimental de diseño de personajes ficticios inspirados en el género Nu Metal bajo un concepto estético coreano. Se utilizaron de forma cruzada plataformas como ChatGPT, Dall-E y Kling AI. Al operar con tecnologías en constante actualización, el reto radicó en corregir anomalías anatómicas y variaciones gráficas de los integrantes. Se solucionó mediante la redacción de instrucciones de texto altamente específicas, asegurando una identidad unificada.", 
       challenge: "Crear personajes consistentes con estética Nu Metal utilizando herramientas de IA generativa en evolución.",
       solution: "Dirección de arte unificada y realista aplicada a retratos de personajes que conservan sus rasgos distintivos.",
       tags: ["IA Generativa", "Dirección de Arte", "Personajes"], 
@@ -740,8 +725,8 @@
       role: "Director de Arte Multimodal",
       tech: "DALL-E 3, Midjourney, Kling AI, ChatGPT",
       processMedia: [
-        { type: 'image', src: 'gg_img_1.jpg' },
-        { type: 'image', src: 'gg_img_2.jpg' },
+        { type: 'image', src: 'gg_img_1.png' },
+        { type: 'image', src: 'gg_img_2.png' },
         { type: 'image', src: '1_Aguilar_Orellana_Sabogal_Promocional.png' },
         { type: 'image', src: '2_Aguilar_Orellana_Sabogal_Live.jpeg' },
         { type: 'image', src: '4_Aguilar_Orellana_Sabogal_Biografía.png' },
@@ -794,7 +779,7 @@
         { type: 'image', src: '504357432_18360616639194729_846210208303386658_n.jpg' },
         { type: 'image', src: '20250415_133236.jpg' },
         { type: 'image', src: '20250415_133531.jpg' },
-        { type: 'image', src: 'Katalina Garay, Angel Sabogal, Federica mandl.jpg' },
+        { type: 'image', src: 'Katalina%20Garay,%20Angel%20Sabogal,%20Federica%20mandl.jpg' },
         { type: 'image', src: '9.jpg' },
         { type: 'image', src: '10.jpg' },
         { type: 'image', src: '11.jpg' },
@@ -807,9 +792,9 @@
       title: "Exploradores de la Imaginación", 
       year: "2025",
       subtitle: "Identidad & Ilustración Infantil", 
-      heroImage: "imagen principal.jpg",
+      heroImage: "imagen%20principal.jpg",
       heroPosition: "center 30%",
-      secondaryImage: "mockup_triptico.png",
+      secondaryImage: "mockup_triptico_png.png",
       desc: "Diseño del sistema integral de identidad y comunicación visual para la inauguración de la \"Sala de Literatura Infantil Margarita Mieres\" en la Biblioteca Nacional de Chile. A partir de un profundo ejercicio de empatía con la audiencia infantil, el reto radicó en dar orden formal al material gráfico sin perder la frescura. Se adoptó una dirección de arte caricaturesca con ilustraciones de líneas gruesas aplicada en señalética, banners y merchandising.", 
       challenge: "Diseñar una identidad de marca integral para una sala de lectura infantil que conecte de forma directa con su mirada.",
       solution: "Sistema visual alegre y consistente de estilo caricaturesco, aplicado con éxito en la inauguración y entorno de la sala.",
@@ -819,12 +804,12 @@
       tech: "Ilustración Digital, Materiales de Señalética",
       processMedia: [
         { type: 'image', src: '519158883_18364653154194729_5320923274673104332_n.jpg' },
-        { type: 'image', src: 'mockup_tote.png' },
+        { type: 'image', src: 'mockup_tote_png.png' },
         { type: 'image', src: '20250709_161236.jpg' },
         { type: 'image', src: '20250709_164352.jpg' },
         { type: 'image', src: 'avionpapel.jpg' },
         { type: 'image', src: '6.jpg' },
-        { type: 'image', src: 'Texto del párrafo.jpg' },
+        { type: 'image', src: 'Texto%20del%20p%C3%A1rrafo.jpg' },
         { type: 'image', src: '4.jpg' }
       ]
     },
@@ -833,7 +818,7 @@
       title: "Bio Handbag", 
       year: "2025",
       subtitle: "Diseño Sostenible & Biomateriales", 
-      heroImage: "handbag.jpg",
+      heroImage: "handbag.png",
       secondaryImage: "20251125_003024.jpg",
       desc: "Propuesta de diseño sostenible y circular consistente en la fabricación de un bolso modular de biocuero a partir de residuos orgánicos (aserrín y café). El diseño estructural prescinde de costuras y pegamentos, empleando encajes mecánicos para su ensamblaje. El desafío físico fue escalar la receta del biomaterial (gelatina, glicerina y agua) a láminas grandes manteniendo flexibilidad y firmeza, lo que se resolvió modificando las proporciones químicas y ajustando los planos vectoriales para corte láser.", 
       challenge: "Desarrollar un bolso funcional utilizando un biomaterial de producción propia, optimizando su ensamblaje mediante encajes mecánicos.",
@@ -987,7 +972,7 @@
       let cleanSubtitle = project.subtitle ? project.subtitle.split('·')[0].trim() : '';
 
       const fallbackUrl = `https://images.unsplash.com/photo-${project.imageId}?w=500&h=500&fit=crop&auto=format`;
-      const imgSrc = resolveImgPath(project.heroImage) || fallbackUrl;
+      const imgSrc = project.heroImage || fallbackUrl;
 
       card.innerHTML = `
         <div class="circle-img-wrap relative w-36 h-36 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full overflow-hidden mb-5 border-2 border-custom transition-all duration-300 shadow-xl">
@@ -1068,7 +1053,7 @@
     
     const heroImg = document.getElementById('modalHeroImg');
     const heroFallback = `https://images.unsplash.com/photo-${proj.imageId}?w=1600&h=800&fit=crop&auto=format`;
-    heroImg.src = resolveImgPath(proj.heroImage) || heroFallback;
+    heroImg.src = proj.heroImage || heroFallback;
     heroImg.style.objectPosition = proj.heroPosition || 'center';
     heroImg.onerror = function() { this.onerror=null; this.src = heroFallback; };
     heroImg.alt = proj.title;
@@ -1092,7 +1077,7 @@
 
     const secondaryImg = document.getElementById('modalSecondaryImg');
     const secFallback = `https://images.unsplash.com/photo-${proj.imageId}?w=900&h=700&fit=crop&auto=format`;
-    secondaryImg.src = resolveImgPath(proj.secondaryImage) || secFallback;
+    secondaryImg.src = proj.secondaryImage || secFallback;
     secondaryImg.onerror = function() { this.onerror=null; this.src = secFallback; };
     secondaryImg.alt = `${proj.title} Muestra`;
 
@@ -1131,8 +1116,6 @@
         card.className = "flex-shrink-0 w-64 sm:w-72 md:w-80 aspect-video rounded-2xl overflow-hidden snap-start cursor-pointer transition-transform hover:scale-[1.02] border border-white/10 hover:border-accent shadow-xl relative group";
         card.onclick = () => openLightboxModal(item);
 
-        const mediaSrc = resolveImgPath(item.src);
-
         if (item.type === 'video') {
           if (item.src.includes('drive.google.com')) {
             card.innerHTML = `
@@ -1145,7 +1128,7 @@
             `;
           } else {
             card.innerHTML = `
-              <video src="${mediaSrc}" class="w-full h-full object-cover pointer-events-none" muted preload="metadata"></video>
+              <video src="${item.src}" class="w-full h-full object-cover pointer-events-none" muted preload="metadata"></video>
               <div class="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                 <div class="w-12 h-12 rounded-full bg-accent/90 text-black flex items-center justify-center pl-0.5 shadow-lg">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -1156,7 +1139,7 @@
         } else {
           const fallback = `https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format`;
           card.innerHTML = `
-            <img src="${mediaSrc}" onerror="this.onerror=null; this.src='${fallback}'" alt="Foto de Proceso" class="w-full h-full object-cover pointer-events-none">
+            <img src="${item.src}" onerror="this.onerror=null; this.src='${fallback}'" alt="Foto de Proceso" class="w-full h-full object-cover pointer-events-none">
           `;
         }
         slider.appendChild(card);
@@ -1206,8 +1189,7 @@
     const zoomBtn = document.getElementById('zoomToggleBtn');
     const instructionBar = document.getElementById('lightboxInstructionBar');
 
-    const rawSrc = typeof mediaItem === 'string' ? mediaItem : mediaItem.src;
-    const src = resolveImgPath(rawSrc);
+    const src = typeof mediaItem === 'string' ? mediaItem : mediaItem.src;
     const type = typeof mediaItem === 'object' ? mediaItem.type : 'image';
 
     lightboxImg.classList.add('hidden');
@@ -1219,10 +1201,10 @@
     if (lightboxIframe) lightboxIframe.src = '';
 
     if (type === 'video') {
-      if (rawSrc.includes('drive.google.com')) {
+      if (src.includes('drive.google.com')) {
         if (lightboxIframe) {
           lightboxIframe.classList.remove('hidden');
-          let embedSrc = rawSrc;
+          let embedSrc = src;
           if (embedSrc.includes('/view')) {
             embedSrc = embedSrc.replace('/view', '/preview');
           } else if (!embedSrc.includes('/preview')) {
@@ -1417,9 +1399,9 @@
   const localCatImg = new Image();
   localCatImg.onload = function() {
     const catEl = document.getElementById('catImage');
-    if (catEl) catEl.src = resolveImgPath('Gato con ojos.png');
+    if (catEl) catEl.src = 'Gato%20con%20ojos.png';
   };
-  localCatImg.src = resolveImgPath('Gato con ojos.png');
+  localCatImg.src = 'Gato%20con%20ojos.png';
 
   renderFilters();
   renderProjectsGrid();
