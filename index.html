@@ -492,7 +492,7 @@
             <span class="text-xs md:text-sm text-white font-medium select-all">contactodobtan@gmail.com</span>
             <button id="copyEmailBtn" onclick="copyEmail()" class="px-3 py-1.5 bg-accent/20 hover:bg-accent text-accent hover:text-black transition-all text-[11px] uppercase font-bold rounded-lg flex items-center gap-1.5 flex-shrink-0">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copiar correo
+              Copiar
             </button>
           </div>
         </div>
@@ -1340,7 +1340,7 @@
         btn.classList.remove('bg-accent/20', 'text-accent');
         
         setTimeout(() => {
-          btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar correo`;
+          btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar`;
           btn.classList.remove('bg-accent', 'text-black');
           btn.classList.add('bg-accent/20', 'text-accent');
         }, 2500);
